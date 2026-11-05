@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <h1>Expense Tracker 💰</h1>
+  <h2>Total Spent: Rs. {{ total }}</h2>
+  <a href="/add"><button>Add Expense</button></a>
+  <hr>
+  {% for e in expenses %}
+    <p>{{ e.date }} - {{ e.category }} : Rs. {{ e.amount }}</p>
+  {% endfor %}
+</body>
+</html>
